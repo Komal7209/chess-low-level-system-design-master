@@ -64,6 +64,7 @@ public class Board {
 
     /**
      * Helper method to determine whether the player is on check on the current board.
+     * Checkmate condition: when king is going to be killed by some other chess piece
      */
     public boolean isPlayerOnCheck(Player player) {
         return checkIfPieceCanBeKilled(player.getPiece(PieceType.KING), kingCheckEvaluationBlockers(), player);
